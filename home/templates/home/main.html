@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block scripts %}  
+{% endblock scripts %}
+
+{% block title %}
+Home
+{% endblock title %}
+
+{% block page_title %}Home{% endblock page_title %}
+
+{% block content %}
+ <!--Main layout-->
+ <main class="my-5">
+    <div class="container">    
+      <!--Section: Content-->
+      <section class="text-center">
+        <h4 class="mb-5"><strong>Welcome to my Blog</strong></h4>
+        <h2 class="mb-5"><strong>Do you want to code sustainable?</strong></h2>
+        <p class="mb-5">Have you ever wondered how you can improve your code or even your work environment to reduce your carbon foot print and sleep better at night as a software developer?<br>Well, you are in the right place to learn more about it.</p>
+        <h4 class="mb-5"><strong>Latest posts</strong></h4>
+        <div class="row">
+          {% for article in articles %}
+          <div class="col-lg-4 col-md-12 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="{{ article.thumb.url }}" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">{{ article.title }}</h5>
+                <p class="card-text">
+                  {{ article.snippet }}
+                </p>
+                <a href="{% url 'home:detail' slug=article.slug %}" class="btn btn-primary">Read</a>
+              </div>
+            </div>
+          </div>
+            {% endfor %}
+        
+        </div>
+      </section>
+      <!--Section: Content-->
+    </div>
+</main>
+<!--Main layout-->
+{% endblock content %}

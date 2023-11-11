@@ -18,10 +18,15 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from rest_framework import routers
 
-urlpatterns = [
-    path('home/', include('home.urls')), 
-    path('', include('articles.urls')), 
+router = routers.DefaultRouter()
+
+urlpatterns = router.urls
+
+urlpatterns += [
+    path('', include('home.urls')), 
+    path('', include('about.urls')), 
     path('admin/', admin.site.urls),
 ]
 

@@ -1,4 +1,119 @@
-body{
-    background: rgba(0, 128, 0, 0.1);
-    
-}
+
+@media (max-width: 991px) {
+    .navbar-scroll {
+      background-color: #fff !important;
+    }
+       
+    .navbar-scroll .navbar-brand,
+    .navbar-scroll .nav-link,
+    .navbar-scroll .fa-bars {
+      color: #000 !important;
+    }         
+  }
+  
+  .navbar {
+    background-color: white;
+  }
+
+  .navbar-brand {
+    letter-spacing: 3px;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  .navbar-scroll .navbar-brand,
+  .navbar-scroll .nav-link,
+  .navbar-scroll .fa-bars {
+    color: #000 !important;
+  }
+  
+  .navbar-scroll {
+    box-shadow: none;
+  }
+  
+  .navbar-scrolled {
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
+  }
+  
+  .navbar-scrolled .navbar-brand,
+  .navbar-scrolled .nav-link,
+  .navbar-scrolled .fa-bars {
+    color: #000;
+  }
+  
+  .navbar-scrolled {
+    background-color: #fff !important;
+  }
+
+  .nav-link {
+    position: relative;
+  }
+
+  .nav-link:hover {
+    color: #073e0edc !important;
+  }
+
+  .nav-link::after {
+    content: '';
+    opacity:0;
+    transition: all 0.2s;
+    height: 2px;
+    width: 100%;
+    background-color: #073e0edc;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+  }
+
+  .nav-link:hover::after {
+    opacity: 1;
+  }
+  
+  @media (max-width: 450px) {
+    #intro {
+      height: 950px !important;
+    }
+  }
+  
+  @media (min-width: 550px) and (max-width: 750px) {
+    #intro {
+      height: 1100px !important;
+    }
+  }
+  
+  @media (min-width: 800px) and (max-width: 990px) {
+    #intro {
+      height: 600px !important;
+    }
+  }
+  
+  .display-1 {
+    font-weight: 500 !important;
+    letter-spacing: 40px;
+  }
+  
+  @media (min-width: 1600px) {
+    .display-1 {
+      font-size: 10rem;
+    }
+  }
+
+  html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    }
+
+  .footer {
+    background-color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+
+
+   

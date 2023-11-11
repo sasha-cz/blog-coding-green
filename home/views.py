@@ -1,9 +1,14 @@
-from django.shortcuts import render 
+from django.shortcuts import render
 from blog.models import Blogpost
-# Create your views here. 
-# # View should pull the blogpost-objects
 
-def home(request): 
-    what_is_green_coding = Blogpost.objects.get(slug='what-is-green-coding') 
+
+def home(request):  
+    articles = Blogpost.objects.filter(approval_status='approved').order_by('date')
     # The value will be the variable created in the line above. The key string can be named whatever we want: 
-    return render(request, 'home.html', {'what_is_green_coding' : what_is_green_coding})  
+    return render(request, 'home/main.html', {'articles': articles})  
+
+
+def article_detail(request, slug):
+    article = Blogpost.objects.get(slug=slug)
+    return render(request, 'home/article_detail.html', {'article': article})
+

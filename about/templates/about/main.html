@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+
+{% block scripts %}  
+{% endblock scripts %}
+
+{% block title %}
+About
+{% endblock title %}
+
+{% block page_title %}About{% endblock page_title %}
+
+{% block content %}
+<section class="py-3 py-md-1">
+    <div class="container">
+      <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
+        <div class="col-12 col-lg-5 order-first order-lg-last">
+          <img class="img-fluid rounded" loading="lazy" src="{{ about.thumb.url }}" alt="profile_image", width=300, height="370">
+        </div>
+        <div class="col-12 col-lg-7">
+          <div class="row justify-content-lg-center">
+            <div class="col-12 col-lg-10">
+              <h2 class="mb-3">{{ about.title }}</h2>
+              <p class="lead fs-4 text-secondary mb-3">{{ about.profile }}</p>
+              <p class="mb-5"> I'm a highly motivated and self-driven career changer seeking for opportunities to contribute to projects that have a positive social impact in the realms of sustainability and education. Currently, I am collaborating in a Python Study Group for women and contributing to open-source projects.</p>
+              <p class="mb-5">In this blog I am exploring how to write code in a more sustainable way and what else software developers can do to reduce their daily carbon footprint. In the near future I'll be also providing some of my projects as examples for more sustainable coding.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><br><br>
+  </section>
+
+ <!-- About - Stack Component -->
+  <section class="py-3 py-md-1">
+    <div class="container">
+      <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
+        <div class="col-12 col-lg-7">
+          <div class="row justify-content-lg-center">
+            <div class="col-12 col-lg-10">
+              <h3 class="mb-3">My Stack</h3>
+
+              <div class="row gy-4 gy-md-0 gx-xxl-5X">
+                <div class="col-12 col-md-6">
+                    <div class="d-flex">
+                        <div>
+                            <p class="mb-5" style="font-size: 1.5em">Python</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="d-flex">
+                        <div>
+                            <p class="mb-5" style="font-size: 1.5em">Django</p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="row gy-4 gy-md-0 gx-xxl-5X">
+                <div class="col-12 col-md-6">
+                    <div class="d-flex">
+                        <div>
+                            <p class="mb-5" style="font-size: 1.5em">Git</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="d-flex">
+                        <div>
+                            <p class="mb-5" style="font-size: 1.5em">GitHub</p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="row gy-4 gy-md-0 gx-xxl-5X">
+                <div class="col-12 col-md-6">
+                    <div class="d-flex">
+                        <div>
+                            <p class="mb-5" style="font-size: 1.5em">PostgreSQL</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="d-flex">
+                        <div>
+                            <p class="mb-5" style="font-size: 1.5em">HTML 5</p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="row gy-4 gy-md-0 gx-xxl-5X">
+                <div class="col-12 col-md-6">
+                    <div class="d-flex">
+                        <div>
+                            <p class="mb-5" style="font-size: 1.5em">CSS 3</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="d-flex">
+                        <div>
+                            <p class="mb-5" style="font-size: 1.5em">Command Line</p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="d-flex">
+                    <div>
+                        <p class="mb-5" style="font-size: 1.5em">Fundamentals of Testing</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><br><br>
+  </section>
+  <!-- About - Contact Component -->
+  <section class="py-3 py-md-1">
+    <div class="container">
+      <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
+        <div class="col-12 col-lg-7">
+          <div class="row justify-content-lg-center">
+            <div class="col-12 col-lg-10">
+              <h3 class="mb-3">Open to Work and Collaboration</h3>
+              <p class="mb-5">If you are looking for a dedicated team member with both technical skills and an environmentally conscious perspective, I look forward to hearing from you. You can reach out to me on LinkedIn, GitHub or via email.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+{% endblock content %}
