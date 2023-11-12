@@ -14,7 +14,7 @@ class Blogpost(models.Model):
     author = models.CharField(max_length=100, default='Alexandra Pietroch') 
     thumb = models.ImageField(default='default.png', blank=True)
     approval_status = models.CharField(max_length=10, default='pending')
-    # add in Likes and Comments later
+    # add Comments later
     # add in Views later
     # add in Category later --> A foreign key or a many-to-many relationship to a category model.
     # add in Tags later --> keywords or labels that describe the content of the post
