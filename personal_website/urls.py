@@ -19,6 +19,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework import routers
+from blog.views import ArticleList, Article 
 
 router = routers.DefaultRouter()
 
@@ -28,7 +29,10 @@ urlpatterns += [
     path('', include('home.urls')), 
     path('', include('about.urls')), 
     path('admin/', admin.site.urls),
+    path('basic/', ArticleList.as_view(), name='article_list'), 
+    path('basic/<slug:slug>/', Article.as_view(), name='article_detail'),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
