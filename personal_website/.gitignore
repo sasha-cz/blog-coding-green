@@ -142,5 +142,4 @@ GitHub.sublime-settings
 !.vscode/extensions.json 
 .history
 
-# SQLite 3
-db.sqlite3
+
