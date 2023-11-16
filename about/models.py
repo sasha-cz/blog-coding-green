@@ -6,6 +6,7 @@ class About(models.Model):
     profile = models.CharField(max_length=200)
     description = models.TextField()
     additional_body = models.TextField(blank=True)
+    contact_body = models.TextField(blank=True)
     thumb = models.ImageField(default='default.jpg', blank=True)
 
     def __str__(self):
