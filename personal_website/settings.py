@@ -31,13 +31,10 @@ INSTALLED_APPS = [
     'rest_framework', #DRF package
     'blog',
     'home',
-    'rss',
-    'tags',
-    'about',
-    
-    
-    
+    'about',   
 ]
+
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
