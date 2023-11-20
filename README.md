@@ -1,28 +1,30 @@
-# Blog: Coding Green
+# 🌳 Blog: _Coding Green_ 🌳
 
-The goal of this project was to build a simple blog using Django and Django REST Framework. If you want to run the project on your local machine you'll need to follow the setup instructions below. The blog serves the demonstration of my learning process.
-Creating this project helped me to learn how to build a website with Django, made me learn more about the frontend components and gives me opportunity to build backend components like RESTful API endpoints using the Django REST Framework.
+The goal of this project was to build a simple blog using Django and Django REST Framework. The blog serves the demonstration of my learning process. 
+Therefore I will continue to work on this project incrementally and split the various stages of this project into different branches and commits so others may follow how I have set this up and that I may look back on the steps I took. 
 
-# Setup: 
+Creating this project helped me to learn how to build a website with Django and gave me opportunity to build backend components like API endpoints using the Django REST Framework. The next step will be to add tests for the existing components.
+
+If you want to run the project on your local machine you'll need to follow the setup instructions below. 
+
+
+# Setup ⚙️ 
 
 ## Prerequisites:
 
-- Python version 3.11
+- [Python version 3.11](https://www.python.org/downloads/)
 
 - Virtual environment tool `virtualenv`.
 
-  If you don't have already, make sure to install virtualenv. For the installation of `virtualenv` see:
-  
-  https://virtualenv.pypa.io/en/latest/installation.html
+  🔗 If you don't have already, make sure to [install virtualenv](https://virtualenv.pypa.io/en/latest/installation.html).
 
 - Database: PostgreSQL
-  If you don't have already, make sure to install PostgreSQL version 15.4:
+  
+  🔗 If you don't have already, make sure to [install PostgreSQL version 15.4](https://www.postgresql.org/download/).
 
-  https://www.postgresql.org/download/
-
-  With this installation the Postgres GUI pgAdmin will be installed as well, unless you uncheck the box for pgAdmin during the installation process. If you did so, you'll need to install pgAdmin separately:
-
-  https://www.pgadmin.org/
+  With this installation the Postgres GUI pgAdmin will be installed as well, unless you uncheck the box for pgAdmin during the installation process.
+  
+  🔗 If you did so, you'll need to [install pgAdmin](https://www.pgadmin.org/) separately.
  
   The connector (database adapter) to connect your Django project with the database is already included in the requirements.txt file (see Step 3).
   
@@ -30,23 +32,40 @@ Creating this project helped me to learn how to build a website with Django, mad
 ## 1. Clone the Repository
   Use the following command:
    
-  `git clone https://github.com/sasha-cz/blog-coding-green.git`
+  ```
+  git clone https://github.com/sasha-cz/blog-coding-green.git
+```
   
-  Navigate to the project directory:
+  Navigate to the project's root directory:
 
   `cd 'personal_website - Kopie'`
 
-## 2. Activate the Virtual Environment
+## 2. Create and Activate a Virtual Environment
    
- The virtual environment is already included in the project ('virtualenv_dj_wd'). Activate the virtual environment.
+ First you will need to create a virtual environment for the project on your local machine.
+ 
+ 🔗 Note: You can find the Python virtualenv docs here: https://virtualenv.pypa.io/en/latest/user_guide.html
+ 
+
+ Virtual Environment - Open a terminal and use the following command to create a virtual environment.
+ 
+  `virtualenv env_name`
+
+ This will create a folder in your current directory.
+ 
+ Activate the virtual environment.
 
   On macOS/Linux (bash):
 
-  `source virtualenv_dj_wd/bin/activate`
+  `source env_name/bin/activate`
   
   On windows (bash):
 
-`.\virtualenv_dj_wd\Scripts\activate`
+`.\env_name\Scripts\activate`
+
+You will know your virtual environment is active when your terminal displays the following:
+
+`(virtualenv) path\to\project\personal_website - Kopie`
 
 ## 3. Installation of Dependencies:
    
