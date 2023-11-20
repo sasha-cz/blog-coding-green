@@ -69,7 +69,7 @@ You will know your virtual environment is active when your terminal displays the
 
 ## 3. Installation of Dependencies:
    
-  You just need to install the packages from the requirements.txt
+  You just need to install the packages from the requirements.txt.
   To do this run in your activated environment:
 
   `pip install -r requirements.txt`
@@ -85,7 +85,7 @@ You will know your virtual environment is active when your terminal displays the
 
 ## 5. Run the Development Server
 
-  Use the following command:
+  To start the development server use the following command:
 
    `python manage.py runserver`
 
