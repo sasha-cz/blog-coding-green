@@ -8,9 +8,9 @@ Creating this project helped me to learn how to build a website with Django and 
 If you want to run the project on your local machine you'll need to follow the setup instructions below. 
 
 
-# Setup ⚙️ 
+## Setup ⚙️ 
 
-## Prerequisites:
+### Prerequisites:
 
 - [Python version 3.11](https://www.python.org/downloads/)
 
@@ -29,7 +29,7 @@ If you want to run the project on your local machine you'll need to follow the s
   The connector (database adapter) to connect your Django project with the database is already included in the requirements.txt file (see Step 3).
   
 
-## 1. Clone the Repository
+### 1. Clone the Repository
   Use the following command:
    
   ```
@@ -40,7 +40,7 @@ If you want to run the project on your local machine you'll need to follow the s
 
   `cd 'personal_website - Kopie'`
 
-## 2. Create and Activate a Virtual Environment
+### 2. Create and Activate a Virtual Environment
    
  First you will need to create a virtual environment for the project on your local machine.
  
@@ -67,14 +67,14 @@ You will know your virtual environment is active when your terminal displays the
 
 `(virtualenv) path\to\project\personal_website - Kopie`
 
-## 3. Installation of Dependencies:
+### 3. Installation of Dependencies:
    
   You just need to install the packages from the requirements.txt.
   To do this run in your activated environment:
 
   `pip install -r requirements.txt`
 
-## 4. Database Setup:
+### 4. Database Setup:
 
   Run migrations to set up the database:
 
@@ -83,20 +83,20 @@ You will know your virtual environment is active when your terminal displays the
    `python manage.py migrate`
 
 
-## 5. Run the Development Server
+### 5. Run the Development Server
 
   To start the development server use the following command:
 
    `python manage.py runserver`
 
-## 6. View the Website in your Browser
+### 6. View the Website in your Browser
 
   Open your browser and navigate to the Homepage of the blog, located at `http://127.0.0.1:8000/home/`
 
-# MIT license for MDB Free
+## MIT license for MDB Free
 The HTML templates and the style.css file within this project may include code snippets and templates provided by https://mdbootstrap.com/ (MDB Free) under the terms of the MIT license:
 
-## Copyright notice
+### Copyright notice
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions.
 
