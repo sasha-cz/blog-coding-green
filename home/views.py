@@ -4,7 +4,6 @@ from blog.models import Blogpost
 
 def home(request):  
     articles = Blogpost.objects.filter(approval_status='approved').order_by('date')
-    # The value will be the variable created in the line above. The key string can be named whatever we want: 
     return render(request, 'home/main.html', {'articles': articles})  
 
 

@@ -1,12 +1,3 @@
-"""
-
-For more information on this file, see
-https://docs.djangoproject.com/en/4.2/topics/settings/
-
-For the full list of settings and their values, see
-https://docs.djangoproject.com/en/4.2/ref/settings/
-"""
-
 from pathlib import Path
 from dotenv import load_dotenv
 import os
@@ -16,20 +7,14 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-
-#SECRET_KEY = 'django-insecure-y@i)8jhinibjl=@6tq0(f2i1e)i!oa0z6lv-a7!&177456r*dq'
 SECRET_KEY = os.environ.get("SECRET_KEY")
+# The SECRET_KEY is stored within the files env.template and .env (added to .gitignore)
 # SECURITY WARNING: don't run with debug turned on in production!
 
 DEBUG = int(os.environ.get("DEBUG", default=0))
 #DEBUG = True
 
 ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
-# ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -41,20 +26,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #my apps
-    'django_extensions', #Great packaged to access abstract models
-    'django_filters', #Used with DRF
+    'django_extensions', 
+    'django_filters', #for DRF
     'rest_framework', #DRF package
-    'api',
     'blog',
     'home',
-    'rss',
-    'tags',
-    'about',
-    # 3rd party
-    
-    
+    'about',   
 ]
+
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -71,7 +51,7 @@ ROOT_URLCONF = 'personal_website.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],   # we need to tell django where to look for additional templates
+        'DIRS': [BASE_DIR / 'templates'],  
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -89,14 +69,13 @@ WSGI_APPLICATION = 'personal_website.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-#To connect using a service name from the connection service file and a password from the password file, 
-# you must specify them in the OPTIONS part of your database configuration in DATABASES:
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "blog",   # database_name
-        "USER": "postgres",
-        "PASSWORD": "Ica#66;z;}2$Kj,*ex",
+        "NAME": "blog",   
+        "USER": os.environ.get("DB_USER"),
+        "PASSWORD": os.environ.get("DB_PASSWORD"),
         "HOST": "localhost"
     }
 }
@@ -122,7 +101,6 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 # Internationalization
-# https://docs.djangoproject.com/en/4.2/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
@@ -134,19 +112,18 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = '/static/' # URL you have to go to to find your static files
+STATIC_URL = '/static/' 
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'  # folder where I store my media files
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
+MEDIA_ROOT = BASE_DIR / 'media'  
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
 REST_FRAMEWORK = {
     'EXCEPTION_HANDLER': 'rest_framework_json_api.exceptions.exception_handler',
