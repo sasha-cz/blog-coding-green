@@ -1,14 +1,34 @@
 # 🌳 Blog: _Coding Green_ 🌳
 
-The goal of this project was to build a simple blog using Django and Django REST Framework. The blog serves the demonstration of my learning process. 
-Therefore I will continue to work on this project incrementally and split the various stages of this project into different branches and commits so others may follow how I have set this up and that I may look back on the steps I took. 
+## Project Overview
 
-Creating this project helped me to learn how to build a website with Django and gave me opportunity to build backend components like API endpoints using the Django REST Framework. The next step will be to add tests for the existing components.
+The goal of this project was to build a simple blog using Django, understand frontend development, and implement backend components such as API endpoints with the Django REST Framework.
 
-If you want to run the project on your local machine you'll need to follow the setup instructions below. 
+## Key Learnings
+
+### Version Control Best Practices:
+
+I realized the importance of organizing project stages into different branches and commits. This not only facilitates collaboration but also allows for a clear retrospective analysis of the development process.
+
+### Security Awareness:
+
+I became more mindful of handling credentials within the Git flow, emphasizing the importance of secure practices.
+
+## Future Steps
+The project is not static. I have plans to further improve it:
+
+### Unit Testing:
+
+Adding comprehensive unit tests to ensure the reliability of the codebase.
+
+### Deployment with Docker:
+
+Preparing the project for deployment using Docker for seamless and scalable distribution.
 
 
 ## Setup ⚙️ 
+
+If you want to run the project on your local machine you'll need to follow the setup instructions below. 
 
 ### Prerequisites:
 
