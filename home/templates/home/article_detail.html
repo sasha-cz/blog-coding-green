@@ -18,14 +18,22 @@
             <article>
                 <!-- Preview image figure-->
                 <figure class="mb-4"><img class="img-fluid rounded" src="{{ article.thumb.url }}" alt="..." /></figure>
+                    {% if article.hyperlink_credit %}
+                        <p>© Image by <a href="{{ article.hyperlink_credit }}" target="_blank">{{ article.clickable_image_credit }}</a></p>
+                    {% endif %}
                 <!-- Post content-->
                 <section class="mb-5">
                     <p class="fs-5 mb-4">{{ article.body_1 }}</p>
-                    <p class="fs-5 mb-4">{{ article.body_2 }}</p>
+                    <h2 class="fw-bolder mb-4 mt-5">{{ article.body_2 }}</h2>
                     <p class="fs-5 mb-4">{{ article.body_3 }}</p>
                     <h2 class="fw-bolder mb-4 mt-5">{{ article.body_4 }}</h2>
                     <p class="fs-5 mb-4">{{ article.body_5 }}</p>
-                    <p class="fs-5 mb-4">{{ article.body_6 }}</p>
+                    <p class="fs-5 mb-4">
+                        {{ article.body_6 }}
+                        {% if article.hyperlink %}
+                            <p class="fs-5 mb-4">If you want to learn more about how to apply these principles in your daily work along with best practices of measurement, knowledge of international guidelines and related organizations responsible for monitoring them, read more at <a href="{{ article.hyperlink }}" target="_blank">{{ article.clickable_word }}</a>.</p>
+                        {% endif %}
+                    </p>
                 </section>
                 <!-- Post categories-->
                 <a class="badge bg-secondary text-decoration-none link-light" href="#!">Resources</a>
