@@ -1,5 +1,4 @@
 from django.db import models
-from urllib.parse import urlparse
 
 class Blogpost(models.Model):
     title = models.CharField(max_length=100) 
